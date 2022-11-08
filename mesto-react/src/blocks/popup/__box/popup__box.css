@@ -1,0 +1,5 @@
+.popup__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}

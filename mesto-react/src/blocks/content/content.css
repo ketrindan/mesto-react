@@ -1,0 +1,12 @@
+.content {
+  display: block;
+  padding-top: 36.25px;
+  padding-bottom: 67px;
+}
+
+@media screen and (max-width: 425px) {
+  .content {
+    padding-top: 38.25px;
+    padding-bottom: 48px;
+  }
+}

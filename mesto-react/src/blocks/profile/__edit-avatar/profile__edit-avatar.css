@@ -1,0 +1,26 @@
+.profile__edit-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.profile__edit-avatar::before {
+  content: url(../../../images/Vector.svg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.profile__edit-avatar:hover::before {
+  opacity: 1;
+}
