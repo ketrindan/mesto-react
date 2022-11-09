@@ -1,7 +1,7 @@
 function ImagePopup(props) {
   function handleOverlayClick(e) {
     if (e.target === e.currentTarget) {
-      {props.onClose()}
+      props.onClose()
     }
   }
   
