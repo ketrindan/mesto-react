@@ -5,6 +5,7 @@
   width: 18px;
   height: 19px;
   background-image: url(../../../images/delete-button.svg);
+  background-color: transparent;
   background-size: 100%;
   border-style: none;
   align-self: center;
