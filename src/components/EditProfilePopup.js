@@ -27,7 +27,7 @@ function EditProfilePopup(props) {
 	useEffect(() => {
 		setName(currentUser.name);
 		setDescription(currentUser.about);
-	}, [currentUser]); 
+	}, [currentUser, props.isOpen]); 
 
 	
 	return (
@@ -36,10 +36,10 @@ function EditProfilePopup(props) {
 			title="Редактировать профиль"
 			children={<>
 				<input type="text" className="form__input form__input_type_name" id="name-input" name="name" placeholder="Имя" 
-					required minLength="2" maxLength="40" value={name} onChange={handleNameChange}/>
+					required minLength="2" maxLength="40" value={name || ""} onChange={handleNameChange}/>
 				<span className="form__input-error name-input-error"></span>
 				<input type="text" className="form__input form__input_type_job" id="job-input" name="job" 
-					placeholder="О себе" required minLength="2" maxLength="200" value={description} onChange={handleDescriptionChange}/>
+					placeholder="О себе" required minLength="2" maxLength="200" value={description || ""} onChange={handleDescriptionChange}/>
 				<span className="form__input-error job-input-error"></span>
 			</>}
 			buttonText="Сохранить"
