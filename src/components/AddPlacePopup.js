@@ -41,7 +41,7 @@ function AddPlacePopup(props) {
 					placeholder="Ссылка на картинку" required value={link} onChange={handleAddLink}/>
         <span className="form__input-error link-input-error"></span>
       </>}
-      buttonText="Создать"
+      buttonText={props.onLoading ? "Сохранение..." : "Сохранить"}
       isOpen={props.isOpen}
       onClose={props.onClose}
 			onSubmit={handleSubmit}

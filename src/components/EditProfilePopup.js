@@ -42,7 +42,7 @@ function EditProfilePopup(props) {
 					placeholder="О себе" required minLength="2" maxLength="200" value={description || ""} onChange={handleDescriptionChange}/>
 				<span className="form__input-error job-input-error"></span>
 			</>}
-			buttonText="Сохранить"
+			buttonText={props.onLoading ? "Сохранение..." : "Сохранить"}
 			isOpen={props.isOpen}
 			onClose={props.onClose}
 			onSubmit={handleSubmit}
