@@ -1,9 +1,27 @@
+import { useEffect } from 'react'
+
 function ImagePopup(props) {
+  useEffect(() => {
+    if (!props.card.name) return;
+
+    function closeByEscape(e) {
+      if (e.key === 'Escape') {
+        props.onClose();
+      }
+    }
+
+    document.addEventListener('keydown', closeByEscape)
+   
+    return () => document.removeEventListener('keydown', closeByEscape)
+  }, [props.card.name, props.onClose])
+
+  
   function handleOverlayClick(e) {
     if (e.target === e.currentTarget) {
       props.onClose()
     }
   }
+  
   
   return (
     <section className={`popup popup_image image-popup ${props.card.name ? "popup_opened" : ""}`} onClick={handleOverlayClick}>
