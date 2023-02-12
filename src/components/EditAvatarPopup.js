@@ -28,7 +28,7 @@ function EditAvatarPopup(props) {
       children={<>
         <input type="url" className="form__input form__input_type_avatar" id="avatar-input" name="avatar" 
 					placeholder="Ссылка на аватар" required onChange={onChange} ref={values.avatar}/>
-        <span className={"form__input-error avatar-input-error" + " " + (errors.avatar ? "form__input-error_active" : "")}>{errors.avatar}</span>
+        <span className={"form__input-error avatar-input-error " + (errors.avatar ? "form__input-error_active" : "")}>{errors.avatar}</span>
       </>}
       buttonText={props.onLoading ? "Сохранение..." : "Сохранить"}
       isOpen={props.isOpen}

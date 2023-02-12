@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import useForm from "../hooks/useForm";
@@ -31,10 +31,10 @@ function EditProfilePopup(props) {
             children={<>
                 <input type="text" className="form__input form__input_type_name" id="name-input" name="name" placeholder="Имя" 
                     required minLength="2" maxLength="40" value={values.name || ""} onChange={onChange}/>
-                <span className={"form__input-error name-input-error" + " " +(errors.name ? "form__input-error_active" : "")}>{errors.name }</span>
+                <span className={"form__input-error name-input-error " +(errors.name ? "form__input-error_active" : "")}>{errors.name }</span>
                 <input type="text" className="form__input form__input_type_job" id="job-input" name="job" 
                     placeholder="О себе" required minLength="2" maxLength="200" value={values.job || ""} onChange={onChange}/>
-                <span className={"form__input-error job-input-error" + " " +(errors.job ? "form__input-error_active" : "")}>{errors.job}</span>
+                <span className={"form__input-error job-input-error " +(errors.job ? "form__input-error_active" : "")}>{errors.job}</span>
             </>}
             buttonText={props.onLoading ? "Сохранение..." : "Сохранить"}
             isOpen={props.isOpen}
