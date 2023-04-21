@@ -65,4 +65,4 @@ npm install
 
 `npm run build` - запуск сборки проекта, проект будет собран в папку `build`
 
-`npm run deploy`- lеплой проекта на Github Pages
+`npm run deploy` - деплой проекта на Github Pages
