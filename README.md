@@ -44,7 +44,7 @@
 ### **Инструкция по установке и сборке**
 1. Клонировать репозиторий
 ```
-git clone https://github.com/VeraChernushina/mesto-react.git
+git clone https://github.com/ketrindan/mesto-react.git
 ```
 2. Перейти в папку проекта
 ```
